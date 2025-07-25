@@ -43,6 +43,8 @@ return {
           hgcommit = false,
           svn = false,
           cvs = false,
+          text = false,
+          txt = false,
           ["."] = false,
         },
 

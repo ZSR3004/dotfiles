@@ -59,10 +59,10 @@ return {
         extensions = {},
       }
     end,
-  }
+  },
 
   { -- Oxocarbon Theme
     "nyoom-engineering/oxocarbon.nvim"
-  }
+  },
 
 }

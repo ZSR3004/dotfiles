@@ -22,6 +22,35 @@ return {
     end,
   },
 
+  { -- LSPConfig
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+    },
+
+    config = function()
+      local lspconfig = require("lspconfig")
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+      -- Python LSP
+      lspconfig.pyright.setup({
+        capabilities = capabilities,
+      })
+
+      -- Lua LSP
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+          },
+        },
+      })
+    end,
+  },
+
   { -- Indent Blankline
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",

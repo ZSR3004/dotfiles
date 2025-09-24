@@ -32,6 +32,7 @@ return {
           cvs = false,
           text = false,
           txt = false,
+          ocaml = false,
           ["."] = false,
         },
         copilot_node_command = "node", -- Node.js version must be > 20

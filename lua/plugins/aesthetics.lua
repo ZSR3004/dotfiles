@@ -1,6 +1,6 @@
 return {
   {
-    "Jxstxs/conceal.nvim",  -- fixed missing quote
+    "Jxstxs/conceal.nvim",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
@@ -12,8 +12,9 @@ return {
         },
       })
 
-      vim.keymap.set("n", "<leader>tc", "<cmd>ConcealToggle<CR>", { desc = "Toggle conceal" })
-
+      vim.keymap.set("n", "<leader>tc", function()
+        require("conceal").toggle_conceal()
+      end, { desc = "Toggle conceal" })
     end,
   },
 }

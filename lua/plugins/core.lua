@@ -50,6 +50,12 @@ return {
           },
         },
       })
+
+    -- OCaml LSP
+    lspconfig.ocamllsp.setup({
+        capabilities = capabilities,
+      })
+
     end,
   },
 

@@ -43,6 +43,14 @@ return {
     i(0),
   }),
 
+  -- iff proof environment
+  s("iffpf", {
+    t({ "\\begin{enumerate}", "\t\\item[$\\Rightarrow$)] " }),
+    i(1),
+    t({ "", "\t\\item[$\\Leftarrow$)] "}),
+    i(2),
+    t({ "", "\\end{enumerate}" }),
+  }),
   -- proof environment
   s("pf", {
     t({ "\\begin{proof}", "\t" }),

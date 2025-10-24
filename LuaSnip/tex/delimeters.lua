@@ -7,5 +7,10 @@ local d = ls.dynamic_node
 local sn = ls.snippet_node
 
 return {
+  s("mb", {
+      t({"\\{ "}),
+      i(1, ""),
+      t({" \\}"})
+    }),
 
 }

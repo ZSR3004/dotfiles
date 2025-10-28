@@ -2,6 +2,7 @@ require("config.lazy")
 
 -- Local Variables --
 local opt=vim.opt
+local bo=vim.bo
 
 -- Tab Sizes --
 opt.tabstop=2

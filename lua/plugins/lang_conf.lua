@@ -1,8 +1,4 @@
 return {
-  { -- LSP Config
-    "neovim/nvim-lspconfig",
-  },
-
   { -- Mason
     "mason-org/mason.nvim",
     config = function()
@@ -18,5 +14,9 @@ return {
         ensure_installed = { "lua_ls", "pyright" }
       })
     end
+  },
+
+  { -- LSP Config
+    "neovim/nvim-lspconfig",
   },
 }

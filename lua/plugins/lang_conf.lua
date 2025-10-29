@@ -10,6 +10,10 @@ return {
     "mason-org/mason-lspconfig.nvim",
   },
 
+  { -- Treesitter
+    "nvim-treesitter/nvim-treesitter",
+  },
+
   { -- LSP Config
     "neovim/nvim-lspconfig",
   },

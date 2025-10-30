@@ -1,4 +1,4 @@
-return {
+return { 
   { -- CMP
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
@@ -7,5 +7,11 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path"
     },
+  },
+
+  { -- Autopairs
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = true
   },
 }

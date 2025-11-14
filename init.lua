@@ -20,4 +20,5 @@ vim.cmd("colorscheme oxocarbon")
 
 -- Keybinds --
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
-
+vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close buffer" })
+vim.keymap.set("n", "<leader>t", ":terminal<CR>", { desc = "Open terminal" })

@@ -1,29 +1,37 @@
 return {
 
-  { -- Treesitter
-    "nvim-treesitter/nvim-treesitter",
-    branch = "main",
-    build = { ":TSUpdate", },
-  },
-
   { -- LSPConfig
     "neovim/nvim-lspconfig",
-    lazy = true,
-  },
-
-  { -- Mason
-    "williamboman/mason.nvim",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+    },
     config = function()
       require("mason").setup()
+      require("mason-lspconfig").setup({
+        automatic_installation = true,
+      })
+
+      local installed_servers = require("mason-lspconfig").get_installed_servers()
+      for _, server_name in ipairs(installed_servers) do
+        local server_config = {}
+
+        if server_name:match("lua") then
+          server_config.settings = {
+            Lua = { diagnostics = { globals = { 'vim' } } }
+          }
+        end
+
+        vim.lsp.config(server_name, server_config)
+      end
     end
   },
 
-  { -- Mason-LSPConfig
-    "mason-org/mason-lspconfig.nvim",
-    dependencies = {
-        "mason-org/mason.nvim",
-        "neovim/nvim-lspconfig",
-    },
-  },
+  { -- Treesitter
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    branch = 'main',
+    build = ':TSUpdate'
+  }
 
 }

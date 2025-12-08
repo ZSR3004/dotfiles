@@ -1,21 +1,24 @@
--- Load lazy.nvim plugin configuration
+--- Neovim Init ---
+
+-- Local Variables --
+local opt=vim.opt
+local bo=vim.bo
+
+-- Lazy Package Manager Setup --
 require("config.lazy")
 
--- Line numbering settings
-vim.opt.number = true                   -- Show absolute line numbers
-vim.opt.relativenumber = true           -- Show relative line numbers
-vim.opt.signcolumn = "yes"
+-- Tab Sizes --
+opt.tabstop=2
+opt.softtabstop=2
+opt.shiftwidth=4
+opt.expandtab=true
 
--- Tab and indentation settings
-vim.bo.tabstop = 4
-vim.bo.shiftwidth = 4
-vim.bo.expandtab = true
-vim.bo.softtabstop = 4
+-- Line Numbers --
+vim.wo.number = true
+vim.wo.relativenumber = true
 
--- Use Nerd Font-compatible symbols
-vim.g.have_nerd_font = true
-
--- Theme
-vim.opt.background = "dark" -- set this to dark or light
+-- Theming --
 vim.cmd("colorscheme oxocarbon")
 
+-- Keybinds --
+require("keybinds")

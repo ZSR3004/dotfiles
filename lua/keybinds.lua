@@ -4,10 +4,6 @@
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 vim.keymap.set("n", "<leader>q", ":q<CR>", { desc = "Close buffer" })
 
--- Buffers --
-vim.keymap.set("n", "<leader>t", ":terminal<CR>", { desc = "Open terminal" })
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { desc = "Exit insert mode in terminal" })
-
 -- Treesitter --
 vim.keymap.set(
   "n", "<leader>d",

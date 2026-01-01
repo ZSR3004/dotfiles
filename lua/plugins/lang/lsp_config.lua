@@ -35,8 +35,16 @@ return {
     opts = {
       highlight = { enable = true, },
     },
-    config = function()
+    config = function(_, opts)
       require("nvim-treesitter.config").setup(opts)
+
+      vim.keymap.set(
+        "n", "<leader>d",
+        function()
+          vim.diagnostic.open_float(nil, { scope = 'line', focusable = true })
+        end,
+        { desc = "Open diagnostic float for current line" }
+        )
     end
   }
 

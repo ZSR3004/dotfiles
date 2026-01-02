@@ -4,10 +4,10 @@ return {
     "xiyaowong/transparent.nvim",
   },
 
-  { -- Let it snow!
-    "marcussimonsen/let-it-snow.nvim",
-    cmd = "LetItSnow",
-    opts = {}
-  },
+  -- { -- Let it snow!
+  --   "marcussimonsen/let-it-snow.nvim",
+  --   cmd = "LetItSnow",
+  --   opts = {}
+  -- },
 
 }

@@ -22,6 +22,8 @@ return {
       local notify = require("notify")
       notify.setup(opts)
       vim.notify = notify
+
+      vim.keymap.set("n", "<leader>fn", ":Telescope notify<CR>", { desc = "Telescope notifications" })
     end
   },
 

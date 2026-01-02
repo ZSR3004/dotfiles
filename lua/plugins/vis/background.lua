@@ -4,10 +4,12 @@ return {
     "xiyaowong/transparent.nvim",
   },
 
-  -- { -- Let it snow!
-  --   "marcussimonsen/let-it-snow.nvim",
-  --   cmd = "LetItSnow",
-  --   opts = {}
-  -- },
+  { -- Deadcolumn
+    -- BUG: Deadcolumn isn't showing even when transparent background off.
+    'Bekaboo/deadcolumn.nvim',
+    config = function (_, opts)
+      require('deadcolumn').setup(opts)
+    end,
+  },
 
 }

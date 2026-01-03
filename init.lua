@@ -20,6 +20,18 @@ vim.wo.relativenumber = true
 vim.cmd("colorscheme oxocarbon")
 vim.opt.termguicolors = true
 
+-- Color Column --
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    vim.api.nvim_set_hl(
+      0,
+      "ColorColumn",
+      { bg = "#000000", ctermbg = "LightGrey" }
+    )
+  end,
+})
+
 -- Keybinds --
 require("keybinds")
 

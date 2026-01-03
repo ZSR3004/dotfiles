@@ -1,30 +1,34 @@
 return {
-
-  { -- LSPConfig
-    "neovim/nvim-lspconfig",
+  { -- LSP Config
+    'neovim/nvim-lspconfig',
     dependencies = {
+      "saghen/blink.cmp",
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
     },
-    config = function()
-      require("mason").setup()
-      require("mason-lspconfig").setup({
-        automatic_installation = true,
-      })
+    opts = {
+      servers = {
+        lua_ls = { Lua = { diagnostics = { globals = { "vim" } } } },
+      },
+    },
+    config = function(_, opts)
+      local mason = require("mason")
+      local mason_lspconfig = require("mason-lspconfig")
 
-      local installed_servers = require("mason-lspconfig").get_installed_servers()
+      mason.setup()
+      mason_lspconfig.setup({ automatic_installation = true })
+
+      local installed_servers = mason_lspconfig.get_installed_servers()
+      local servers = opts.servers
       for _, server_name in ipairs(installed_servers) do
         local server_config = {}
-
-        if server_name:match("lua") then
-          server_config.settings = {
-            Lua = { diagnostics = { globals = { 'vim' } } }
-          }
+        -- TODO: Generalize this for all servers.
+        if server_name:match("lua_ls") then
+          server_config.settings = servers["lua_ls"]
         end
-
         vim.lsp.config(server_name, server_config)
       end
-    end
+    end,
   },
 
   { -- Treesitter

@@ -6,10 +6,12 @@ return {
     build = "make install_jsregexp",
     opts = {
       enabled_autosnippets = true,
+      store_selection_keys = "<Tab>",
       update_events = 'TextChanged,TextChangedI',
     },
     config = function (_, opts)
       require("luasnip").config.set_config(opts)
+      require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip/"})
     end
   },
 

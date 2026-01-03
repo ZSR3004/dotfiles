@@ -78,13 +78,13 @@ return {
     )
   ),
 
-  s({trig="eif", dscr="Creates an else branch."},
+  s({trig="else", dscr="Creates an else branch."},
     fmta (
       [[
-        else <>:
+        else:
           <>
       ]],
-      {i(1, "condition"), i(2, "pass")}
+      {i(1)}
     )
   ),
 

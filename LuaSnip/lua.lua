@@ -24,19 +24,15 @@ return {
         local fmt = require("luasnip.extras.fmt").fmt
         local fmta = require("luasnip.extras.fmt").fmta
         local rep = require("luasnip.extras").rep
-
-        return {
-          <>
-        }
       ]],
-      { i(1) }
+      {}
     )
   ),
 
   s({trig="sn", dscr="Creates an empty LuaSnip snippet."},
     fmta(
       [=[
-        s({trig="<>", dscr="<>"}
+        s({trig="<>", dscr="<>"},
           fmta (
             [[
               <>

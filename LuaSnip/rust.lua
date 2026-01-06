@@ -15,11 +15,24 @@ return {
     fmta (
       [[
         fn <>(<>) ->> <> {
-            todo!()
+            todo!();
         }
 
       ]],
-      {i(1, "function_name"), i(2, "params"), i(3, "returns")}
+      {i(1, "function_name"), i(2), i(3, "returns")}
+    )
+  ),
+
+  s({trig="tst", dscr="Creates a not-implemented test function."},
+    fmta (
+      [[
+        [#(test)]
+        fn <>(<>) ->> <> {
+            todo!();
+        }
+
+      ]],
+      {i(1, "test_name"), i(2), i(3, "Result<(), ()>")}
     )
   ),
 

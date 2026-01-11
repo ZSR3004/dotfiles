@@ -6,4 +6,7 @@ vim.opt_local.spelllang = { "en_us" }
 vim.keymap.set("n", "<leader>mc", ":Markview<CR>", { desc = "Open terminal" })
 
 -- Color Column --
-vim.opt_local.colorcolumn = "120"
+vim.opt_local.colorcolumn = "121"
+
+-- Text Width --
+vim.opt_local.textwidth = 120

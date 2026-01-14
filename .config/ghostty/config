@@ -1,0 +1,61 @@
+############
+### FONT ###
+############
+
+font-family = JetBrainsMonoNerdFont
+font-size = 10
+font-thicken = true
+
+font-feature = liga
+font-feature = calt
+font-feature = dlig
+
+
+##############
+### Window ###
+##############
+
+window-padding-x = 3
+window-padding-y = 5
+
+confirm-close-surface = false
+
+
+#############
+### Theme ###
+#############
+
+background-opacity = 0.9
+background = 181818
+theme = Carbonfox
+cursor-style = block
+
+
+########################
+### TABS AND WINDOWS ###
+########################
+
+resize-overlay = never
+gtk-tabs-location = hidden
+gtk-single-instance = false
+
+
+################
+### KEYBINDS ###
+################
+
+# Tabs
+keybind = performable:ctrl+shift+t=new_tab
+keybind = performable:ctrl+shift+w=close_tab:this
+
+keybind = performable:ctrl+shift+h=next_tab
+keybind = performable:ctrl+shift+l=previous_tab
+keybind = performable:alt+shift+t=toggle_tab_overview
+
+# Clipboard
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = performable:ctrl+shift+p=paste_from_clipboard
+
+# Windows
+keybind = performable:ctrl+shift+enter=toggle_fullscreen
+keybind = ctrl+enter=unbind

@@ -24,7 +24,6 @@ alias pvenv='.venv/bin/python3'
 alias code='code --ozone-platform=wayland'
 alias duh='du -h --max-depth=1'
 alias ..='cd ..'
-alias vim='nvim'
 alias sl='sl -ew'
 alias fzf='fzf --style=full'
 

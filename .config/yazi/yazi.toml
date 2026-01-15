@@ -1,0 +1,28 @@
+[opener]
+pdf = [
+  { run = 'zathura "$@"', orphan = true, for = "unix" },
+]
+office = [
+  { run = 'libreoffice "$@"', orphan = true, for = "unix" },
+]
+
+[open]
+rules = [
+  { mime = "application/pdf", use = "pdf" },
+  { mime = "application/vnd.oasis.opendocument.spreadsheet", use = "office" },
+  { mime = "application/vnd.oasis.opendocument.text", use = "office" },
+  { mime = "application/vnd.oasis.opendocument.presentation", use = "office" },
+  { mime = "application/vnd.oasis.opendocument.graphics", use = "office" },
+  { mime = "application/vnd.oasis.opendocument.formula", use = "office" },
+  { mime = "application/vnd.ms-excel", use = "office" },
+  { mime = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", use = "office" },
+  { mime = "application/vnd.ms-powerpoint", use = "office" },
+  { mime = "application/vnd.openxmlformats-officedocument.presentationml.presentation", use = "office" },
+  { mime = "application/msword", use = "office" },
+  { mime = "application/vnd.openxmlformats-officedocument.wordprocessingml.document", use = "office" },
+]
+
+[mgr]
+prepend_keymap = [
+  { on = [ "e" ], run = 'shell "nvim ." --block --confirm', desc = "Open neovim in current directory" },
+]

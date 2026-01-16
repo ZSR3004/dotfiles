@@ -28,6 +28,8 @@ alias duh='du -h --max-depth=1'
 alias ..='cd ..'
 alias sl='sl -ew'
 alias fzf='fzf --style=full'
+alias nzsh='nvim ~/.zshrc'
+alias szsh='source ~/.zshrc'
 
 
 #############

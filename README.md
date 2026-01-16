@@ -1,6 +1,6 @@
 # ZSR's Dotfiles
 
-Dotfiles for my Arch config. Some of the folders have READMEs with more information.
+Dotfiles for my Arch configuration. Some of the folders have READMEs with more information.
 
 ## Installation and Usage
 

@@ -2,7 +2,8 @@
 ### STARTUP ###
 ###############
 
-command=tmux attach || tmux new-session
+# Removing because I can't get tmux to behave with Neovim
+# command=tmux attach || tmux new-session
 
 
 ############

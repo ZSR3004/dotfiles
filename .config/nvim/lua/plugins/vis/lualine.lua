@@ -1,9 +1,5 @@
 return {
 
-  { -- Oxocarbon
-    "nyoom-engineering/oxocarbon.nvim"
-  },
-
   { -- Lualine
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },

@@ -55,4 +55,14 @@ return {
     end,
   },
 
+  { -- TMUX Nvim
+    "aserowy/tmux.nvim",
+    opts = {
+      redirect_to_clipboard = true,
+    },
+    config = function(_, opts)
+      require("tmux").setup(opts)
+    end
+  },
+
 }

@@ -7,7 +7,8 @@
 ### PROMPT ###
 ##############
 
-PS1="[%n@%m %F{blue}%1~%f]\$ "
+# PS1="[%n@%m %F{blue}%1~%f]\$ "
+PS1="[%F{blue}%1~%f]\$ "
 bindkey -v
 
 

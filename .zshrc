@@ -18,6 +18,7 @@ bindkey -v
 alias ls='eza'
 alias lls='ls -lh --git'
 alias tls='ls -T --icons=auto'
+alias lsa='ls -a'
 alias grep='grep --color=auto'
 alias avenv='source .venv/bin/activate'
 alias pvenv='.venv/bin/python3'

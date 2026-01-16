@@ -35,7 +35,7 @@ alias fzf='fzf --style=full'
 eval "$(thefuck --alias)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh --cmd cd)"
-eval "$(tmuxifier init -)"
+eval "$(opam env)"
 
 
 #######################

@@ -21,4 +21,8 @@ return {
     }
   },
 
+  { -- Git Fugitive
+    "tpope/vim-fugitive",
+  }
+
 }

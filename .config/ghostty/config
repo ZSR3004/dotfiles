@@ -3,7 +3,7 @@
 ###############
 
 # Removing because I can't get tmux to behave with Neovim
-# command=tmux attach || tmux new-session
+command=tmux attach || tmux new-session
 
 
 ############

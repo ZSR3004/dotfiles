@@ -88,4 +88,5 @@ bindkey "^[n" nvim_widget
 bindkey "^[y" yazi_widget
 bindkey "^[f" fzf_pipe_widget
 
-
+### WHAT DOES THIS DO??? WHERE DID IT COME FROM????? ###
+. "$HOME/.local/bin/env"

@@ -19,7 +19,18 @@ return {
      "m4xshen/hardtime.nvim",
      lazy = false,
      dependencies = { "MunifTanjim/nui.nvim" },
-     opts = {},
+     opts = {
+        disabled_keys = {
+          ["<Up>"] = { "", "i" },
+          ["<Down>"] = { "", "i" },
+          ["<Left>"] = { "", "i" },
+          ["<Right>"] = { "", "i" },
+          ["<Esc>"] = {"", "i"},
+        },
+      },
+      config = function(_, opts)
+        require("hardtime").setup(opts)
+      end
   },
 
 }

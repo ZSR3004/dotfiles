@@ -30,6 +30,8 @@ alias sl='sl -ew'
 alias fzf='fzf --style=full'
 alias nzsh='nvim ~/.zshrc'
 alias szsh='source ~/.zshrc'
+alias pip='pip3'
+alias python=/opt/homebrew/bin/python3
 
 
 #############

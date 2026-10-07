@@ -9,13 +9,15 @@ local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
 
+in_mathzone = function()  -- math context detection
+  return vim.fn['vimtex#syntax#in_mathzone']() == 1
+end
+
 return {
 
   s({trig="ii", dscr="Creates a math mode environment.", snippetType="autosnippet"},
     fmta (
-      [[
-        $<>$
-      ]],
+      [[$<>$]],
       {i(1)}
     )
   ),
@@ -24,7 +26,7 @@ return {
     fmta (
       [[
         \begin{<>}
-          <>
+            <>
         \end{<>}
       ]],
       {i(1), i(0), rep(1)}
@@ -35,7 +37,7 @@ return {
     fmta (
       [[
         \begin{align*}
-          <>
+            <>
         \end{align*}
       ]],
       {i(0)}
@@ -46,10 +48,21 @@ return {
     fmta (
       [[
         \begin{enumerate}
-          \item
+            \item
         \end{enumerate}
       ]],
       {}
+    )
+  ),
+
+  s({trig="pf", dscr="Creates a proof environment.", snippetType="autosnippet"},
+    fmta (
+      [[
+        \begin{proof}
+            <>
+        \end{proof}
+      ]],
+      {i(1)}
     )
   ),
 
@@ -57,11 +70,12 @@ return {
     fmta (
       [[
         \begin{enumerate}
-          \item[$(\Rightarrow)$] <>
-          \item[$(\Leftarrow)$] <>
+            \item[$(\Rightarrow)$] <>
+            \item[$(\Leftarrow)$] <>
         \end{enumerate}
       ]],
       {i(1), i(2)}
     )
   ),
+
 }

@@ -32,44 +32,59 @@ end
 
 return {
 
-  s({trig="dv", dscr="Creates a divides bar.", snippetType="autosnippet"},
+  s({trig="inv", dscr="Raise to -1.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+       {<>}^{-1}<>
+      ]],
+      {i(1), i(0)}
+    )
+  ),
+
+  s({trig="dv", dscr="Creates a divides bar.", snippetType="autosnippet", condition=in_mathzone},
     fmta (
       [[
         \mid
       ]],
-      {},
-      {condition = in_mathzone}
+      {}
     )
   ),
 
-  s({trig="mb", dscr="Creates set brackets.", snippetType="autosnippet"},
+  s({trig="mb", dscr="Creates set brackets.", snippetType="autosnippet", condition=in_mathzone},
     fmta (
       [[
         \{ <> \}
       ]],
-      {i(1)},
-      {condition = in_mathzone}
+      {i(1)}
     )
   ),
 
-  s({trig="dv", dscr="Creates a divides bar.", snippetType="autosnippet"},
+  s({trig="mid", dscr="Creates a divides bar.", snippetType="autosnippet", condition=in_mathzone},
     fmta (
       [[
         \mid
       ]],
-      {},
-      {condition = in_mathzone}
+      {}
     )
   ),
 
-  s({trig="mb", dscr="Creates set brackets.", snippetType="autosnippet"},
+  s({trig="mb", dscr="Creates set brackets.", snippetType="autosnippet", condition=in_mathzone},
     fmta (
       [[
         \{ <> \}
       ]],
-      {i(1)},
-      {condition = in_mathzone}
+      {i(1)}
     )
   ),
+
+  s({trig="es", dscr="Empty set.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+        \varnothing
+      ]],
+      {}
+    )
+  ),
+
 
 }

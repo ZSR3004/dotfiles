@@ -24,7 +24,7 @@ vim.opt.clipboard = "unnamedplus"
 
 
 -- Theming --
-require("kanagawa").load("dragon")
+require("oxocarbon")
 vim.opt.termguicolors = true
 
 -- Color Column --

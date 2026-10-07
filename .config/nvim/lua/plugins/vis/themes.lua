@@ -11,4 +11,9 @@ return {
       config = true,
   },
 
+  { -- Oxocarbon (automated reasoning)
+    "nyoom-engineering/oxocarbon.nvim",
+    build = false,
+  }
+
 }

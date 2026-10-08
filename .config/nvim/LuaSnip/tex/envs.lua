@@ -5,6 +5,7 @@ local t = ls.text_node
 local i = ls.insert_node
 local f = ls.function_node
 local d = ls.dynamic_node
+local t = ls.text_node
 local fmt = require("luasnip.extras.fmt").fmt
 local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
@@ -15,14 +16,14 @@ end
 
 return {
 
-  s({trig="ii", dscr="Creates a math mode environment.", snippetType="autosnippet"},
+  s({trig="ii", dscr="Math mode environment.", snippetType="autosnippet"},
     fmta (
       [[$<>$]],
       {i(1)}
     )
   ),
 
-  s({trig="bg", dscr="Creates an LaTeX environment.", snippetType="autosnippet"},
+  s({trig="bg", dscr="Generic LaTeX environment.", snippetType="autosnippet"},
     fmta (
       [[
         \begin{<>}
@@ -33,7 +34,7 @@ return {
     )
   ),
 
-  s({trig="mm", dscr="Creates an align/equation environment.", snippetType="autosnippet"},
+  s({trig="mm", dscr="Align/equation environment.", snippetType="autosnippet"},
     fmta (
       [[
         \begin{align*}
@@ -44,18 +45,18 @@ return {
     )
   ),
 
-  s({trig="en", dscr="Creates an enumerate environment.", snippetType="autosnippet"},
+  s({trig="nm", dscr="Enumerate environment.", snippetType="autosnippet"},
     fmta (
       [[
         \begin{enumerate}
-            \item
+            \item <>
         \end{enumerate}
       ]],
-      {}
+      {i(1)}
     )
   ),
 
-  s({trig="pf", dscr="Creates a proof environment.", snippetType="autosnippet"},
+  s({trig="pf", dscr="Proof environment.", snippetType="autosnippet"},
     fmta (
       [[
         \begin{proof}
@@ -66,7 +67,7 @@ return {
     )
   ),
 
-  s({trig="en", dscr="Creates an enumerate environment.", snippetType="autosnippet"},
+  s({trig="iffpf", dscr="Bijection proof.", snippetType="autosnippet"},
     fmta (
       [[
         \begin{enumerate}

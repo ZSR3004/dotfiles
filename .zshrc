@@ -92,3 +92,5 @@ bindkey "^[f" fzf_pipe_widget
 
 ### WHAT DOES THIS DO??? WHERE DID IT COME FROM????? ###
 . "$HOME/.local/bin/env"
+
+[ -f "/Users/zsr/.ghcup/env" ] && . "/Users/zsr/.ghcup/env" # ghcup-env

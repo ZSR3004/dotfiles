@@ -2,8 +2,7 @@
 ### STARTUP ###
 ###############
 
-# Removing because I can't get tmux to behave with Neovim
-# command=tmux attach || tmux new-session
+command = /opt/homebrew/bin/tmux new-session -A -s main
 
 
 ############
@@ -11,7 +10,7 @@
 ############
 
 font-family = JetBrainsMonoNerdFont
-font-size = 12
+font-size = 13
 font-thicken = true
 
 font-feature = liga
@@ -52,18 +51,13 @@ gtk-single-instance = false
 ### KEYBINDS ###
 ################
 
-# Tabs
-keybind = performable:ctrl+shift+t=new_tab
-keybind = performable:ctrl+shift+w=close_tab:this
+keybind = clear
 
-keybind = performable:ctrl+shift+h=next_tab
-keybind = performable:ctrl+shift+l=previous_tab
-keybind = performable:alt+shift+t=toggle_tab_overview
+# Font Size / Zoom
+keybind = cmd+equal=increase_font_size:1
+keybind = cmd+minus=decrease_font_size:1
+keybind = cmd+0=reset_font_size
 
 # Clipboard
-keybind = performable:ctrl+c=copy_to_clipboard
-keybind = performable:ctrl+shift+p=paste_from_clipboard
-
-# Windows
-keybind = performable:ctrl+shift+enter=toggle_fullscreen
-keybind = ctrl+enter=unbind
+keybind = performable:cmd+c=copy_to_clipboard
+keybind = performable:cmd+shift+p=paste_from_clipboard

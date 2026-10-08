@@ -1,8 +1,8 @@
 return {
 
-  { import = 'plugins.lang' },
-  { import = 'plugins.vis' },
-  { import = 'plugins.navi' },
-  { import = 'plugins.git' },
+    { import = 'plugins.lang' },
+    { import = 'plugins.nav' },
+    { import = 'plugins.git' },
+    { import = 'plugins.vis' },
 
 }

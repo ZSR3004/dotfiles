@@ -1,22 +1,19 @@
 return {
 
-  { -- Oxocarbon
-    "nyoom-engineering/oxocarbon.nvim",
+  { -- Kanagawa
+    "rebelot/kanagawa.nvim",
     priority = 1000,
   },
 
-  -- { -- Kanagawa
-  --   "rebelot/kanagawa.nvim",
-  --   config = function ()
-  --     require('kanagawa').setup({
-  --       transparent = true,
-  --     })
-  --   end
-  -- },
-  --
-  -- {
-  --   "chaserensberger/christmas.nvim",
-  --   name = "christmas",
-  -- },
+  {
+      'tribela/transparent.nvim',
+      event = 'VimEnter',
+      config = true,
+  },
+
+  { -- Oxocarbon (automated reasoning)
+    "nyoom-engineering/oxocarbon.nvim",
+    build = false,
+  }
 
 }

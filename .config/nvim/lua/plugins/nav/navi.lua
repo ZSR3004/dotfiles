@@ -38,6 +38,9 @@ return {
               ["<C-w>"] = actions.delete_buffer,
             },
           },
+          file_ignore_patterns = {
+            "%.pdf"
+          },
         },
       }
     end,

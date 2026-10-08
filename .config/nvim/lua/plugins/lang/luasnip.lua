@@ -6,7 +6,7 @@ return {
     build = "make install_jsregexp",
     lazy = false,
     opts = {
-      enabled_autosnippets = true,
+      enable_autosnippets = true,
       store_selection_keys = "<Tab>",
       update_events = 'TextChanged,TextChangedI',
     },

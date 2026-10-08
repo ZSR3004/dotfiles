@@ -40,7 +40,7 @@ return {
       ts.setup()
 
       -- TODO: Automate language collection so that it just installs it by default.
-      local filetypes = { 'python', 'c', 'rust', 'ocaml', 'markdown', 'tex'}
+      local filetypes = { 'python', 'c', 'rust', 'ocaml', 'markdown'}
       vim.api.nvim_create_autocmd('FileType', {
           pattern = filetypes,
           callback = function()
@@ -52,5 +52,26 @@ return {
       })
     end
   },
+
+  { -- ALE
+    'dense-analysis/ale',
+    ft = {'sml'},
+    config = function()
+        -- Configuration goes here.
+        local g = vim.g
+
+        -- g.ale_ruby_rubocop_auto_correct_all = 1
+
+        g.ale_linters = {
+            sml = {"smlnj"}
+            -- ruby = {'rubocop', 'ruby'},
+            -- lua = {'lua_language_server'}
+        }
+    end
+  },
+
+  { -- vim-better-sml
+    'jez/vim-better-sml'
+  }
 
 }

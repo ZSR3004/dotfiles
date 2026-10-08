@@ -3,6 +3,9 @@
 -- Local Variables --
 local opt=vim.opt
 
+-- Keybinds --
+require("keybinds")
+
 -- Lazy Package Manager Setup --
 require("config.lazy")
 
@@ -16,8 +19,14 @@ opt.expandtab=true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Line Wrap --
+vim.opt.wrap = false
+
+-- Clipboard --
+vim.opt.clipboard = "unnamedplus"
+
 -- Theming --
-vim.cmd("colorscheme oxocarbon")
+require("oxocarbon")
 vim.opt.termguicolors = true
 
 -- Color Column --
@@ -32,9 +41,3 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   end,
 })
 
--- Keybinds --
-require("keybinds")
-
--- Concealment --
-vim.opt.conceallevel = 2
-vim.opt.concealcursor = ""

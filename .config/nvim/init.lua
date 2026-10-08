@@ -19,9 +19,11 @@ opt.expandtab=true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Line Wrap --
+vim.opt.wrap = false
+
 -- Clipboard --
 vim.opt.clipboard = "unnamedplus"
-
 
 -- Theming --
 require("oxocarbon")

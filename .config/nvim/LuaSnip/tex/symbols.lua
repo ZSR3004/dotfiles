@@ -41,15 +41,6 @@ return {
     )
   ),
 
-  s({trig="dv", dscr="Creates a divides bar.", snippetType="autosnippet", condition=in_mathzone},
-    fmta (
-      [[
-        \mid
-      ]],
-      {}
-    )
-  ),
-
   s({trig="mb", dscr="Creates set brackets.", snippetType="autosnippet", condition=in_mathzone},
     fmta (
       [[
@@ -85,6 +76,71 @@ return {
       {}
     )
   ),
+
+  s({trig="ff", dscr="Fraction.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+        \frac{<>}{<>}
+      ]],
+      {i(1), i(2)}
+    )
+  ),
+
+  s({trig="rar", dscr="Simple right arrow.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+        \rightarrow
+      ]],
+      {}
+    )
+  ),
+
+  s({trig="lar", dscr="Simple left arrow.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+        \leftarrow
+      ]],
+      {}
+    )
+  ),
+
+  s({trig="imp", dscr="Implication arrow.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+        \implies
+      ]],
+      {}
+    )
+  ),
+
+  s({trig="simp", dscr="Implication text.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+        \text{ implies }
+      ]],
+      {}
+    )
+  ),
+
+  s({trig="bij", dscr="Bimplication arrow.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+        \iff
+      ]],
+      {}
+    )
+  ),
+
+  s({trig="sbij", dscr="Bimplication text.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+        \text{ implies }
+      ]],
+      {}
+    )
+  ),
+
+
 
 
 }

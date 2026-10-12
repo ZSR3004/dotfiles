@@ -51,7 +51,10 @@ gtk-single-instance = false
 ### KEYBINDS ###
 ################
 
-keybind = clear
+# Tabs
+keybind = cmd+t=unbind
+keybind = cmd+l=unbind
+keybind = cmd+h=unbind
 
 # Font Size / Zoom
 keybind = cmd+equal=increase_font_size:1

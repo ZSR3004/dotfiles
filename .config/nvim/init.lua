@@ -19,7 +19,7 @@ opt.expandtab=true
 vim.wo.number = true
 vim.wo.relativenumber = true
 
--- Line Wrap --
+-- Line Wrap and Breaks --
 vim.opt.wrap = false
 
 -- Clipboard --

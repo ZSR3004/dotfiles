@@ -71,7 +71,28 @@ return {
   },
 
   { -- vim-better-sml
-    'jez/vim-better-sml'
+    'jez/vim-better-sml',
+    ft = { 'sml' },
+    init = function() -- A great shame; all this code to turn off auto line breaks.
+    local group = vim.api.nvim_create_augroup("SMLTextWidth", { clear = true })
+
+    vim.api.nvim_create_autocmd("FileType", {
+      group = group,
+      pattern = "sml",
+      callback = function(event)
+        vim.schedule(function()
+          if vim.api.nvim_buf_is_valid(event.buf) then
+            vim.api.nvim_set_option_value("textwidth", 0, {
+              buf = event.buf,
+            })
+          end
+        end)
+      end,
+    })
+  end,
+    config = function()
+      vim.opt_local.textwidth=0
+    end
   }
 
 }

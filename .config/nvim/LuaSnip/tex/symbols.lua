@@ -41,6 +41,15 @@ return {
     )
   ),
 
+  s({trig="sbs", dscr="Subscript.", snippetType="autosnippet", condition=in_mathzone},
+    fmta (
+      [[
+       <>^{<>}<>
+      ]],
+      {i(1), i(2), i(0)}
+    )
+  ),
+
   s({trig="mb", dscr="Creates set brackets.", snippetType="autosnippet", condition=in_mathzone},
     fmta (
       [[

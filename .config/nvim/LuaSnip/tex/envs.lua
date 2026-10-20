@@ -23,6 +23,15 @@ return {
     )
   ),
 
+  s({trig="txt", dscr="Text field in math mode.",
+      snippetType="autosnippet",
+      condition=in_mathzone},
+    fmta (
+      [[\text{<>}<>]],
+      {i(1), i(0)}
+    )
+  ),
+
   s({trig="bg", dscr="Generic LaTeX environment.", snippetType="autosnippet"},
     fmta (
       [[
@@ -33,6 +42,18 @@ return {
       {i(1), i(0), rep(1)}
     )
   ),
+
+  s({trig="vbt", dscr="Verbatim LaTeX environment.", snippetType="autosnippet"},
+    fmta (
+      [[
+        \begin{verbatim}
+        <>
+        \end{verbatim}
+      ]],
+      {i(1)}
+    )
+  ),
+
 
   s({trig="mm", dscr="Align/equation environment.", snippetType="autosnippet"},
     fmta (

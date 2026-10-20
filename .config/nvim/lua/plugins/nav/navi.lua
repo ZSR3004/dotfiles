@@ -53,8 +53,9 @@ return {
       vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
       vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
       vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+      vim.keymap.set('n', '<leader>fs', builtin.current_buffer_fuzzy_find, { desc = 'Telescope in buffer' })
       vim.keymap.set('n', '<leader>fk', ':Telescope keymaps<CR>', { desc = 'Telescope keybinds' })
-      vim.keymap.set('n', '<leader>fs', ':Telescope luasnip', { desc = 'Telescopes snippets' })
+      vim.keymap.set('n', '<leader>fl', ':Telescope luasnip<CR>', { desc = 'Telescopes snippets' })
     end,
   },
 

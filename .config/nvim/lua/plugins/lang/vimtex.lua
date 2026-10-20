@@ -10,8 +10,6 @@ return {
       }
     end,
     config = function()
-      vim.keymap.set("n", "<leader>b", "<cmd>VimtexCompile<CR>", { noremap = true, silent = true })
-      vim.keymap.set("n", "<leader>v", "<cmd>VimtexView<CR>", { noremap = true, silent = true })
 
       -- TODO: Add function to toggle conceal --
       vim.g.vimtex_syntax_conceal = {
